@@ -537,7 +537,7 @@ function show_letters($letterstart, $userid) {
     if ($letterstart == "1") {
         echo "<span class=\"lettertaken\">[ 0-9 ]</span> ";
     } elseif ($digits_available) {
-        echo "<a href=\"/" . htmlentities($_SERVER["PHP_SELF"], ENT_QUOTES) . "?letter=1\">[ 0-9 ]</a> ";
+        echo "<a href=\"" . htmlentities($_SERVER["PHP_SELF"], ENT_QUOTES) . "?letter=1\">[ 0-9 ]</a> ";
     } else {
         echo "[ <span class=\"letternotavailable\">0-9</span> ] ";
     }
@@ -546,7 +546,7 @@ function show_letters($letterstart, $userid) {
         if ($letter == $letterstart) {
             echo "<span class=\"lettertaken\">[ " . $letter . " ]</span> ";
         } elseif (in_array($letter, $available_chars)) {
-            echo "<a href=\"/" . htmlentities($_SERVER["PHP_SELF"], ENT_QUOTES) . "?letter=" . $letter . "\">[ " . $letter . " ]</a> ";
+            echo "<a href=\"" . htmlentities($_SERVER["PHP_SELF"], ENT_QUOTES) . "?letter=" . $letter . "\">[ " . $letter . " ]</a> ";
         } else {
             echo "[ <span class=\"letternotavailable\">" . $letter . "</span> ] ";
         }
@@ -555,7 +555,7 @@ function show_letters($letterstart, $userid) {
     if ($letterstart == 'all') {
         echo "<span class=\"lettertaken\">[ Show all ]</span>";
     } else {
-        echo "<a href=\"/" . htmlentities($_SERVER["PHP_SELF"], ENT_QUOTES) . "?letter=all\">[ Show all ]</a> ";
+        echo "<a href=\"" . htmlentities($_SERVER["PHP_SELF"], ENT_QUOTES) . "?letter=all\">[ Show all ]</a> ";
     }
 }
 
