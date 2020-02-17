@@ -30,6 +30,10 @@
  */
 // TODO: display elapsed time and memory consumption,
 // used to check improvements in refactored version
+
+
+$_SERVER['PHP_SELF'] = implode('/',array_unique(explode('/',$_SERVER['PHP_SELF'])));
+
 $display_stats = false;
 if ($display_stats)
     include('inc/benchmark.php');
