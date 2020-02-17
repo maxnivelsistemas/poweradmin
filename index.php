@@ -29,6 +29,9 @@
  * @copyright   2010-2017  Poweradmin Development Team
  * @license     http://opensource.org/licenses/GPL-3.0 GPL
  */
+
+$_SERVER['PHP_SELF'] = implode('/',array_unique(explode('/',$_SERVER['PHP_SELF'])));
+
 require_once("inc/toolkit.inc.php");
 include_once("inc/header.inc.php");
 
